@@ -1,0 +1,53 @@
+/* main.css - Global styles for SpoJeDy */
+@import 'https://unpkg.com/primeicons/primeicons.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #4D4D4D;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AE00FF;
+}
+
+/* Remove default range input styles */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+/* Smooth page transitions */
+.router-view-enter-active,
+.router-view-leave-active {
+  transition: opacity 0.2s ease;
+}
+.router-view-enter-from,
+.router-view-leave-to {
+  opacity: 0;
+}
+
+/* Prevent text selection during drag */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Icon for Dark/Light Mode */
+.icon-theme-dark {
+  color: rgba(255,255,255,0.8);
+}
+
+.icon-theme-light {
+  color: rgba(0,0,0,0.7);
+}
