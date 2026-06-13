@@ -127,7 +127,7 @@ import { useThemeStore, usePlayerStore } from '../stores/index.js'
 import SearchBar from '../components/SearchBar.vue'
 import SongItem from '../components/SongItem.vue'
 
-const bgDark = '../assets/Background - Dark.png'
+const bgDark = 'https://ik.imagekit.io/nauvalihsan/SpoJeDy%20Assets/Background%20-%20Dark.png?updatedAt=1779530863666'
 const bgLight = 'https://ik.imagekit.io/nauvalihsan/SpoJeDy%20Assets/Background%20-%20Light.png'
 
 const router = useRouter()
