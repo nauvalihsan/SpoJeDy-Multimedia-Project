@@ -61,7 +61,8 @@
           @mousedown="startSeekDrag"
         >
           <!-- Dynamic width bar -->
-          <div class="absolute inset-0 rounded-full bg-white/30"></div>
+          <div class="absolute inset-0 rounded-full"
+          :class="isDark ? 'bg-white/30' : 'bg-black/30'"></div>
           <div
             class="absolute left-0 top-0 h-full rounded-full bg-[#AE00FF] transition-all duration-100"
             :style="{ width: progressPercent + '%' }"
@@ -106,6 +107,7 @@
         <div
           ref="volumeBar"
           class="flex-1 relative h-1 group cursor-pointer"
+          :class="isDark ? 'bg-white/30' : 'bg-black/30'"
           @click="seekVolume"
           @mousedown="startVolumeDrag"
         >
@@ -128,7 +130,7 @@
       <button
         v-if="song?.video"
         @click="switchToVideo"
-        :class="['flex items-center gap-2 px-4 py-2 rounded-full text-white text-xs hover:text-[#AE00FF] transition-colors backdrop-blur-md', 
+        :class="['flex items-center gap-2 px-4 py-2 rounded-full text-xs hover:text-[#AE00FF] transition-colors backdrop-blur-md', 
           isDark ? 'icon-theme-dark' : 'icon-theme-light'
 
         ]"
